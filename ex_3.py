@@ -1,41 +1,3 @@
-class User:
-    users = []
-
-    def __init__(self, info):
-        self.id = info[0]
-        self.nick_name = info[1]
-        self.firstname = info[2]
-        self.last_name = info[3]
-        self.middle_name = info[4]
-        self.gender = info[5]
-
-    def update(self, id=None, nick_name=None, first_name=None,
-               last_name=None, middle_name=None, gender=None):
-        if id:
-            self.id = id
-        if nick_name:
-            self.nick_name = nick_name
-        if first_name:
-            self.firstname = first_name
-        if last_name:
-            self.last_name = last_name
-        if middle_name:
-            self.middle_name = middle_name
-        if gender:
-            self.gender = gender
-
-    def __str__(self):
-        output = f'ID: {self.id} Nickname: {self.nick_name} Name: '
-        if self.last_name:
-            output += f'{self.last_name} '
-        output += f'{self.firstname} '
-        if self.middle_name:
-            output += f'{self.middle_name} '
-        if self.gender:
-            output += f'Gender: {self.gender}'
-        return output
-
-
 class Date:
     name_months = ['янв', 'фев', 'мар', 'апр',
                         'май', 'июн', 'июл', 'авг',
@@ -124,6 +86,44 @@ class Date:
             return self.__date
         else:
             return 'None'
+
+class User:
+    users = []
+
+    def __init__(self, info):
+        self.id = info[0]
+        self.nick_name = info[1]
+        self.firstname = info[2]
+        self.last_name = info[3]
+        self.middle_name = info[4]
+        self.gender = info[5]
+
+    def update(self, id=None, nick_name=None, first_name=None,
+               last_name=None, middle_name=None, gender=None):
+        if id:
+            self.id = id
+        if nick_name:
+            self.nick_name = nick_name
+        if first_name:
+            self.firstname = first_name
+        if last_name:
+            self.last_name = last_name
+        if middle_name:
+            self.middle_name = middle_name
+        if gender:
+            self.gender = gender
+
+    def __str__(self):
+        output = f'ID: {self.id} Nickname: {self.nick_name} Name: '
+        if self.last_name:
+            output += f'{self.last_name} '
+        output += f'{self.firstname} '
+        if self.middle_name:
+            output += f'{self.middle_name} '
+        if self.gender:
+            output += f'Gender: {self.gender}'
+        return output
+
 
 class Meeting:
     lst_meeting = []
